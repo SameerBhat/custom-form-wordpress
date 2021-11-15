@@ -16,7 +16,7 @@
 <div class="form-container">
 
 
-    <form class="quote-form" action="/test">
+    <form class="quote-form" method="POST" action="/wp-json/contact-form-7/v1/contact-forms/2923/feedback">
 
         <div class="quote-form-section-container">
             <h1>01. Choose a Manufacturer</h1>
@@ -259,29 +259,29 @@
             <div class="shape-main-container">
                 <div class="gallery-section">
                     <div class="shape-input-wrapper shape-input-gallery-width">
-                        <input class="shape-input " name="gallery_width">
+                        <input type="number" class="shape-input" name="gallery_width">
                     </div>
                     <div class="shape-input-wrapper shape-input-gallery-height">
-                        <input class="shape-input " name="gallery_height">
+                        <input type="number" class="shape-input" name="gallery_height">
                     </div>
                     <img class="gallery-section-img" src="https://www.surfaceco.uk/wp-content/themes/surfaceco/images/online-form-images/gallery-shape-main-img.jpg">
                 </div>
 
                 <div class="l-shape-section">
                     <div class="shape-input-wrapper shape-input-l-shape-length-1">
-                        <input class="shape-input " name="l-shape_length-1">
+                        <input type="number" class="shape-input" name="l-shape_length-1">
                     </div>
 
                     <div class="shape-input-wrapper shape-input-l-shape-length-2">
-                        <input class="shape-input " name="l-shape_length-2">
+                        <input type="number" class="shape-input" name="l-shape_length-2">
                     </div>
 
                     <div class="shape-input-wrapper shape-input-l-shape-width-1">
-                        <input class="shape-input " name="l-shape_width-1">
+                        <input type="number" class="shape-input" name="l-shape_width-1">
                     </div>
 
                     <div class="shape-input-wrapper shape-input-l-shape-width-2">
-                        <input class="shape-input " name="l-shape_width-2">
+                        <input type="number" class="shape-input" name="l-shape_width-2">
                     </div>
 
 
@@ -291,30 +291,30 @@
 
                 <div class="u-shape-section" >
                     <div class="shape-input-wrapper shape-input-u-shape-section-length-1">
-                        <input class="shape-input " name="u-shape-section_length-1">
+                        <input type="number" class="shape-input" name="u-shape-section_length-1">
                     </div>
 
                     <div class="shape-input-wrapper shape-input-u-shape-section-length-2">
-                        <input class="shape-input " name="u-shape-section_length-2">
+                        <input type="number" class="shape-input" name="u-shape-section_length-2">
                     </div>
 
 
                     <div class="shape-input-wrapper shape-input-u-shape-section-length-3">
-                        <input class="shape-input " name="u-shape-section_length-3">
+                        <input type="number" class="shape-input" name="u-shape-section_length-3">
                     </div>
 
 
 
                     <div class="shape-input-wrapper shape-input-u-shape-section-width-1">
-                        <input class="shape-input " name="u-shape-section_width-1">
+                        <input type="number" class="shape-input" name="u-shape-section_width-1">
                     </div>
 
                     <div class="shape-input-wrapper shape-input-u-shape-section-width-2">
-                        <input class="shape-input " name="u-shape-section_width-2">
+                        <input type="number" class="shape-input" name="u-shape-section_width-2">
                     </div>
 
                     <div class="shape-input-wrapper shape-input-u-shape-section-width-3">
-                        <input class="shape-input " name="u-shape-section_width-3">
+                        <input type="number" class="shape-input" name="u-shape-section_width-3">
                     </div>
 
                   <img class="u-shape-section-img" src="https://www.surfaceco.uk/wp-content/themes/surfaceco/images/online-form-images/u-shape-main-img.jpg">
@@ -326,10 +326,10 @@
                 <div class="plus-island-section">
 
                     <div class="shape-input-wrapper shape-input-island-width">
-                        <input class="shape-input " name="island_width">
+                        <input type="number" class="shape-input" name="island_width">
                     </div>
                     <div class="shape-input-wrapper shape-input-island-height">
-                        <input class="shape-input " name="island_height">
+                        <input type="number" class="shape-input" name="island_height">
                     </div>
                     <img class="gallery-section-img" src="https://www.surfaceco.uk/wp-content/themes/surfaceco/images/online-form-images/island-img.jpg">
                 </div>
@@ -386,7 +386,6 @@
     jQuery('.u-shape-section').hide();
 
     jQuery('input[type=radio][name=price]').change(function() {
-        console.log("price changes")
 
         switch (jQuery(this).val()) {
             case 'low':
@@ -409,7 +408,6 @@
 
 
     jQuery('input[type=radio][name=shape]').change(function() {
-console.log("shape changes")
         switch (jQuery(this).val()) {
             case 'gallery':
                 jQuery('.gallery-section').show();
